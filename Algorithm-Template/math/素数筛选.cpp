@@ -13,7 +13,7 @@ void init(){
         if(!notprime[i]){
             if(i > MAXN / i)    continue;   //防止后面i*i溢出（或者i，j用long long）
             //直接从i*i开始就可以，小于i倍的已经筛选过了，注意是j += i
-            for(int j = i * i; j < MAXN; j++){
+            for(int j = i * i; j < MAXN; j += i){
                 notprime[j] = true;
             }
         }
